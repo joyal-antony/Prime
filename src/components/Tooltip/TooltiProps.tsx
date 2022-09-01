@@ -7,7 +7,12 @@ export interface ITooltipProps extends ITooltipOptions {
     id?: string;
     target?: TooltipTargetType;
     content?: string;
+    autoHide?: boolean;
+    disabled?: boolean;
+    position?: TooltipPositionType;
+    className?: string;
     children?: React.ReactNode;
+
 }
 
 

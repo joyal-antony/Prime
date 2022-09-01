@@ -6,7 +6,11 @@ import {
      getTooltipTarget,
     getTooltipcontent,
     getTooltipid, 
-    TooltipProps} from "./Tooltip";
+    TooltipProps,
+    getTooltipposition,
+    getTooltipdisabled,
+    getTooltipclassName,
+    getTooltipautoHide} from "./Tooltip";
 
 const getTooltiProps =(props:ITooltipProps)=>{
     let tooltipProps ={} as TooltipProps
@@ -14,7 +18,11 @@ const getTooltiProps =(props:ITooltipProps)=>{
     tooltipProps=getTooltipTarget(props,tooltipProps)
     tooltipProps=getTooltipcontent(props,tooltipProps)
     tooltipProps=getTooltipid(props,tooltipProps)
-
+    tooltipProps=getTooltipautoHide(props,tooltipProps)
+    tooltipProps=getTooltipclassName(props,tooltipProps)
+    tooltipProps=getTooltipdisabled(props,tooltipProps)
+    tooltipProps=getTooltipposition(props,tooltipProps)
+   
     return tooltipProps
 }
 

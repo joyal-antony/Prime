@@ -1,5 +1,5 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/lara-light-indigo/theme.css';
+// import 'primeicons/primeicons.css';
+// import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import '../index.css';
 import ReactDOM from 'react-dom';
 
@@ -45,8 +45,8 @@ const TooltipDemo = () => {
                 <div className="flex align-items-center">
                     <Button type="button" label="Save" icon="pi pi-check" tooltip={saveBtnTooltipText} onClick={() => setSaveBtnTooltipText('Completed')} />
 
-                    <Tooltip target=".knob" content={`${knobValue}%`} />
-                    <Knob className="knob ml-3" value={knobValue} onChange={(e) => setKnobValue(e.value)} showValue={true} />
+                    <Tooltip target=".knob" content={`${knobValue}%`} position="top" />
+                    <Knob className="knob ml-3" value={knobValue}  onChange={(e) => setKnobValue(e.value)} showValue={true} />
 
                     <Tooltip target=".slider>.p-slider-handle" content={`${sliderValue}%`} position="top" event="focus" />
                     <Slider className="slider ml-3" value={sliderValue} onChange={(e) => setSliderValue(e.value)} style={{ width: '14rem' }} />

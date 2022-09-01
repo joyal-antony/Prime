@@ -6,10 +6,14 @@ type TooltipTargetType = string | string[] | HTMLElement;
 
 
 export interface TooltipProps extends TooltipOptions {
-    id?: string;
-    target?: TooltipTargetType;
-    content?: string;
-    children?: React.ReactNode;
+  id?: string;
+  content?: string;
+  target?: TooltipTargetType;
+  autoHide?: boolean;
+  disabled?: boolean;
+  position?: TooltipPositionType;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 
@@ -93,9 +97,65 @@ const getTooltipcontent = (props: ITooltipProps, tooltipProps: TooltipProps) => 
     return newtooltipProps;
   };
 
+  const getTooltipautoHide = (props: ITooltipProps, tooltipProps: TooltipProps) => {
+    const {
+      autoHide
+    } = props;
+  
+    const newtooltipProps = tooltipProps;
+  
+    if (_.isBoolean(autoHide) === true) {
+        newtooltipProps.autoHide = autoHide;
+    }
+  
+    return newtooltipProps;
+  };
 
+  const getTooltipdisabled = (props: ITooltipProps, tooltipProps: TooltipProps) => {
+    const {
+      disabled
+    } = props;
+  
+    const newtooltipProps = tooltipProps;
+  
+    if (_.isBoolean(disabled) === true) {
+        newtooltipProps.disabled = disabled;
+    }
+  
+    return newtooltipProps;
+  };
+  const getTooltipposition = (props: ITooltipProps, tooltipProps: TooltipProps) => {
+    const {
+      position
+    } = props;
+  
+    const newtooltipProps = tooltipProps;
+  
+    if (position) {
+        newtooltipProps.position = position;
+    }
+  
+    return newtooltipProps;
+  };
+  const getTooltipclassName = (props: ITooltipProps, tooltipProps: TooltipProps) => {
+    const {
+      className
+    } = props;
+  
+    const newtooltipProps = tooltipProps;
+  
+    if (_.isEmpty(className) === false) {
+      newtooltipProps.className = className;
+    }
+  
+    return newtooltipProps;
+  };
 export{
     getTooltipTarget,
     getTooltipcontent,
-    getTooltipid
+    getTooltipid,
+    getTooltipautoHide,
+    getTooltipclassName,
+    getTooltipdisabled,
+    getTooltipposition
 }
