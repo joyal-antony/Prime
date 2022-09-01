@@ -44,7 +44,7 @@ const getCarouselclassName = (props: ICarousel, carouselProps: CarouselProps) =>
   
     const newCarouselProps = carouselProps;
   
-    if (_.isEmpty(className) === true) {
+    if (_.isEmpty(className) === false) {
       newCarouselProps.className = className;
     }
   

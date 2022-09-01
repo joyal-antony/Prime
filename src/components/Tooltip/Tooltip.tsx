@@ -72,7 +72,7 @@ const getTooltipid = (props: ITooltipProps, tooltipProps: TooltipProps) => {
   
     const newtooltipProps = tooltipProps;
   
-    if (_.isEmpty(id) === true) {
+    if (_.isEmpty(id) === false) {
         newtooltipProps.id = id;
     }
   
@@ -86,7 +86,7 @@ const getTooltipcontent = (props: ITooltipProps, tooltipProps: TooltipProps) => 
   
     const newtooltipProps = tooltipProps;
   
-    if (_.isEmpty(content) === true) {
+    if (_.isEmpty(content) === false) {
         newtooltipProps.content = content;
     }
   

@@ -87,7 +87,7 @@ const getDataViewLayoutclassName = (props: IDataViewLayoutOptionsProps, dataView
   
     const newdataViewLayoutOptionsProps = dataViewLayoutOptionsProps;
   
-    if (_.isEmpty(className) === true) {
+    if (_.isEmpty(className) === false) {
       newdataViewLayoutOptionsProps.className = className;
     }
   
@@ -114,7 +114,7 @@ const getDataViewclassName = (props: IDataViewProps, dataviewProps: DataViewProp
   
     const newDataViewProps = dataviewProps;
   
-    if (_.isEmpty(className) === true) {
+    if (_.isEmpty(className) === false) {
       newDataViewProps.className = className;
     }
   
