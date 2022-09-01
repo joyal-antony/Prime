@@ -1,10 +1,12 @@
 import './App.css';
-import CarouselDemo from './components/CarouselDemo';
-import DataviewDemo from './components/Sample';
+// import CarouselDemo from './components/CarouselDemo';
+// import DataviewDemo from './components/Sample';
+import TooltipDemo from './components/Tooltip';
 
 function App() {
   return (
-      <DataviewDemo/>
+      <TooltipDemo/>
+      // <DataviewDemo/>
       // <CarouselDemo/>
     
   );
